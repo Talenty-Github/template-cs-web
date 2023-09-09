@@ -4,4 +4,4 @@ export {
 	type PageData,
 	type ButtonList,
 	IconType
-}
+};

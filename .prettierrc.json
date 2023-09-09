@@ -1,7 +1,12 @@
 {
   "tabWidth": 2,
+  "useTabs": true,
   "semi": true,
   "singleQuote": true,
   "jsxSingleQuote": true,
-  "trailingComma": "all"
+  "trailingComma": "all",
+  "bracketSameLine": true,
+  "plugins": [
+    "prettier-plugin-astro"
+  ]
 }

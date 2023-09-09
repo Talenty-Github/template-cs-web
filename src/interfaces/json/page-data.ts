@@ -1,6 +1,7 @@
 export interface PageData {
 	title: string;
 	subTitle: string;
+	pageColor: string;
 	buttonList: Array<ButtonList>;
 }
 

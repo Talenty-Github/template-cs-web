@@ -1,7 +1,8 @@
 ---
 import 'bootstrap-icons/font/bootstrap-icons.css';
-import type { IconType } from '../../interfaces';
+import { IconType } from '../../interfaces';
 import styles from './social-button.module.scss';
+import templateData from '../../../template.config';
 
 interface SocialButtonProps {
 	link: string;
@@ -11,13 +12,23 @@ interface SocialButtonProps {
 }
 
 const { link, iconType, borderColor, iconColor }: SocialButtonProps = Astro.props as SocialButtonProps;
+const pageColorHover = templateData.pageColor;
 ---
 
-<a 
-	style=`border: 1px solid ${ borderColor ?? '#adadad' }`
-	href={ link } target="_blank" class={ styles['social-button'] }>
-	<i 
-		style=`color: ${ iconColor ?? '#5c5c5c' }`
-		class=`bi bi-${ iconType }`>
+<a
+	style=`border: 1px solid ${borderColor ?? '#adadad'}`
+	href={ link }
+	target='_blank'
+	rel='noopener noreferrer'
+	class={ styles['social-button'] }>
+	<i
+		style=`color: ${iconColor ?? '#5c5c5c'}`
+		class=`bi bi-${iconType}`>
 	</i>
 </a>
+
+<style define:vars={{ pageColorHover }}>
+	a:hover {
+		border: 2px solid var(--pageColorHover) !important;
+	}
+</style>

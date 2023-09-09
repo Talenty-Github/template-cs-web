@@ -13,8 +13,8 @@ const { buttonList }: SocialButtonListProps = Astro.props as SocialButtonListPro
 <div class={ styles['social-list'] }>
 	{buttonList.map((button: ButtonList) => {
 		const { link, type, color }: ButtonList = button;
-		
-		return(
+
+		return (
 			<SocialButton
 				link={ link }
 				iconType={ type }

@@ -17,6 +17,7 @@
     "@astrojs/vercel": "^4.0.5",
     "astro": "^3.0.12",
     "bootstrap-icons": "^1.10.5",
+    "prettier": "^3.0.3",
     "sass": "^1.66.1"
   },
   "devDependencies": {

@@ -1,19 +1,12 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import { SocialButtonList, Title } from '../components/index.astro';
-import { type PageData } from '../interfaces';
-import { pageData } from '../utils';
+import pageData from '../../template.config';
 ---
 
 <Layout title='Template'>
-	{pageData.map(( data: PageData ) => {
-		const { title, subTitle, buttonList }: PageData = data;
-		
-		return(
-			<main>
-				<Title title={ title } subTitle={ subTitle }/>
-				<SocialButtonList buttonList={ buttonList } />	
-			</main>
-		); 
-	})}
+	<main>
+		<Title title={ pageData.title } subTitle={ pageData.subTitle }/>
+		<SocialButtonList buttonList={ pageData.buttonList } />
+	</main>
 </Layout>

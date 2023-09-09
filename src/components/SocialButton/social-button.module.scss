@@ -4,13 +4,13 @@
 	border-radius: $border-radius-8;
 	width: $spacing-48;
 	height: $spacing-48;
-	border: 1px solid $carbon-400;
 	display: flex;
 	align-items: center;
 	justify-content: center;
+	border: 2px solid $carbon-400 !important;
+	transition: .3s ease all;
 
 	i {
-		color: $carbon-800;
 		font-size: $spacing-24;
 	}
 }
