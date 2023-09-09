@@ -1,0 +1,26 @@
+---
+import SocialButton from '../SocialButton/SocialButton.astro';
+import { type ButtonList } from '../../interfaces';
+import styles from './social-button-list.module.scss';
+
+interface SocialButtonListProps {
+	buttonList: Array<ButtonList>
+}
+
+const { buttonList }: SocialButtonListProps = Astro.props as SocialButtonListProps;
+---
+
+<div class={ styles['social-list'] }>
+	{buttonList.map((button: ButtonList) => {
+		const { link, type, color }: ButtonList = button;
+		
+		return(
+			<SocialButton
+				link={ link }
+				iconType={ type }
+				borderColor={ color?.border }
+				iconColor={ color?.icon }
+			/>
+		);
+	})}
+</div>

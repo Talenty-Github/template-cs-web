@@ -1,4 +1,23 @@
 ---
+import 'bootstrap-icons/font/bootstrap-icons.css';
+import type { IconType } from '../../interfaces';
 import styles from './social-button.module.scss';
+
+interface SocialButtonProps {
+	link: string;
+	iconType: IconType,
+	borderColor?: string;
+	iconColor?: string;
+}
+
+const { link, iconType, borderColor, iconColor }: SocialButtonProps = Astro.props as SocialButtonProps;
 ---
 
+<a 
+	style=`border: 1px solid ${ borderColor ?? '#adadad' }`
+	href={ link } target="_blank" class={ styles['social-button'] }>
+	<i 
+		style=`color: ${ iconColor ?? '#5c5c5c' }`
+		class=`bi bi-${ iconType }`>
+	</i>
+</a>

@@ -1,0 +1,8 @@
+@import "../../styles/globals.module.scss";
+
+.social-list {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: $spacing-8;
+}
