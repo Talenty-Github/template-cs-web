@@ -1,7 +1,7 @@
 {
   "name": "template_coming_soon",
   "type": "module",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
@@ -10,6 +10,10 @@
     "astro": "astro"
   },
   "dependencies": {
-    "astro": "^3.0.12"
+    "@astrojs/sitemap": "^3.0.0",
+    "@astrojs/vercel": "^4.0.5",
+    "astro": "^3.0.12",
+    "lucide-react": "^0.274.0",
+    "sass": "^1.66.1"
   }
 }
