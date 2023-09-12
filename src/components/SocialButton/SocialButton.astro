@@ -11,7 +11,7 @@ interface SocialButtonProps {
 
 const { link, iconType }: SocialButtonProps = Astro.props as SocialButtonProps;
 // Todo: remove this line from here
-const pageColorHover = templateData.pageColor;
+const pageColorHover = templateData.socialColor;
 ---
 
 <a href={ link } target='_blank' rel='noopener noreferrer' class={ styles['social-button'] }>

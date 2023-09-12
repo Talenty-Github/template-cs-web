@@ -3,6 +3,7 @@ export interface PageData {
 	subTitle: string;
 	pageColor: string;
 	backgroundColor?: string;
+	socialColor: string;
 	imagePreview: ImagePreview;
 	buttonList: Array<ButtonList>;
 }
@@ -11,8 +12,8 @@ export interface ButtonList {
 	type: IconType;
 	link: string;
 	color?: {
-		border: string;
-		icon: string;
+		border?: string;
+		icon?: string;
 	}
 }
 
