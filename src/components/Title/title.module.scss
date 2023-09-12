@@ -11,3 +11,10 @@ h3 {
 	color: $carbon-600;
 	font-size: $font-size-44;
 }
+
+@media (max-width: $breakpoint-tablet) {
+  h1 {
+		text-align: center;
+		margin-bottom: 20px;
+	}
+}
