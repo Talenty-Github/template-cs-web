@@ -13,28 +13,28 @@ const templateData: PageData = {
 	buttonList: [
 		{
 			type: IconType.Instagram,
-			link: 'https://www.google.com',
+			link: 'https://www.instagram.com/gringogordowv/',
 			color: {
 				icon: '#FFFFFF'
 			}
 		},
 		{
 			type: IconType.Tiktok,
-			link: 'https://www.google.com',
+			link: 'https://www.tiktok.com/@gringogordowv',
 			color: {
 				icon: '#FFFFFF'
 			}
 		},
 		{
 			type: IconType.Facebook,
-			link: 'https://www.google.com',
+			link: 'https://www.facebook.com/GringoGordoWestVirginia/',
 			color: {
 				icon: '#FFFFFF'
 			}
 		},
 		{
 			type: IconType.YouTube,
-			link: 'https://www.google.com',
+			link: 'https://www.youtube.com/@GringoGordo',
 			color: {
 				icon: '#FFFFFF'
 			}
