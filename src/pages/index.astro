@@ -1,12 +1,33 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import { SocialButtonList, Title } from '../components/index.astro';
+import {
+	ImageComponent,
+	SocialButtonList,
+	Subtitle,
+	Title
+} from '../components/index.astro';
 import pageData from '../../template.config';
+import styles from './home.module.scss';
+
+const {
+	imagePreview,
+	title,
+	buttonList
+} = pageData;
 ---
 
 <Layout title='Template'>
-	<main>
-		<Title title={ pageData.title } subTitle={ pageData.subTitle }/>
-		<SocialButtonList buttonList={ pageData.buttonList } />
+	<main class={ styles.main }>
+		<div class={ styles.main__header }>
+			<Title title={ title }/>
+			<div class={ styles.main__header__logo }>
+				<ImageComponent src={ imagePreview.src } alt={ imagePreview.alt } />
+				<div class={ styles.main__header__logo__social }>
+					<SocialButtonList buttonList={ buttonList }/>
+				</div>
+			</div>
+		</div>
+
+		<Subtitle/>
 	</main>
 </Layout>

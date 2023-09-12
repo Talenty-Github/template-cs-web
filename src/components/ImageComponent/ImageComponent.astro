@@ -1,0 +1,12 @@
+---
+import './image-component.module.scss';
+
+interface ImageComponentProps {
+	src: string;
+	alt: string;
+}
+
+const { src, alt }: ImageComponentProps = Astro.props as ImageComponentProps;
+---
+
+<img src={ src } alt={ alt } />

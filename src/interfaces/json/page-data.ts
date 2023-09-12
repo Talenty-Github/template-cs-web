@@ -2,6 +2,8 @@ export interface PageData {
 	title: string;
 	subTitle: string;
 	pageColor: string;
+	backgroundColor?: string;
+	imagePreview: ImagePreview;
 	buttonList: Array<ButtonList>;
 }
 
@@ -12,6 +14,11 @@ export interface ButtonList {
 		border: string;
 		icon: string;
 	}
+}
+
+interface ImagePreview {
+	src: string;
+	alt: string;
 }
 
 export enum IconType {

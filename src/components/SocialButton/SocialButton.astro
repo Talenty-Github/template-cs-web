@@ -7,28 +7,19 @@ import templateData from '../../../template.config';
 interface SocialButtonProps {
 	link: string;
 	iconType: IconType,
-	borderColor?: string;
-	iconColor?: string;
 }
 
-const { link, iconType, borderColor, iconColor }: SocialButtonProps = Astro.props as SocialButtonProps;
+const { link, iconType }: SocialButtonProps = Astro.props as SocialButtonProps;
+// Todo: remove this line from here
 const pageColorHover = templateData.pageColor;
 ---
 
-<a
-	style=`border: 1px solid ${borderColor ?? '#adadad'}`
-	href={ link }
-	target='_blank'
-	rel='noopener noreferrer'
-	class={ styles['social-button'] }>
-	<i
-		style=`color: ${iconColor ?? '#5c5c5c'}`
-		class=`bi bi-${iconType}`>
-	</i>
+<a href={ link } target='_blank' rel='noopener noreferrer' class={ styles['social-button'] }>
+	<i class=`bi bi-${iconType}`></i>
 </a>
 
 <style define:vars={{ pageColorHover }}>
-	a:hover {
-		border: 2px solid var(--pageColorHover) !important;
+	a > i {
+		color: var(--pageColorHover) !important;
 	}
 </style>

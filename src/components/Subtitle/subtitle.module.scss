@@ -1,0 +1,24 @@
+@import "../../styles/globals.module.scss";
+
+h2 {
+	text-align: center;
+	font-size: 140px;
+  color: transparent;
+  font-weight: $font-weight-regular;
+  margin-bottom: -150px;
+  -webkit-text-stroke: 1px white;
+  text-transform: uppercase;
+	transition: color 1s ease-in-out, -webkit-text-stroke 1s ease-in-out;
+	animation: changeColor 1s ease-in-out 1s infinite alternate;
+}
+
+
+@keyframes changeColor {
+	0% {
+    -webkit-text-stroke: 1px white;
+  }
+	
+  100% {
+    color: white;
+  }
+}
