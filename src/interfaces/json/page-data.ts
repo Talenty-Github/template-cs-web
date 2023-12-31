@@ -4,8 +4,9 @@ type IconType = 'instagram' | 'facebook' | 'tiktok' | 'youtube';
 export interface IPageData {
 	title: string;
 	languague?: Languague | undefined;
-	colors: Colors;
+	siteUrl: string;
 	imageUrl: string;
+	colors: Colors;
 	socialMedia: Array<ISocialMedia>;
 }
 

@@ -9,11 +9,11 @@ import {
 import { templateData } from '../../template.config';
 import styles from './home.module.scss';
 
-const { title, languague, colors, imageUrl, socialMedia } = templateData;
+const { title, languague, colors, imageUrl, socialMedia, siteUrl } = templateData;
 const { principalColor, background, socialColor, soonColor } = colors;
 ---
 
-<Layout title={ title } languague={ languague } background={ background } favicon={ imageUrl } >
+<Layout title={ title } languague={ languague } background={ background } favicon={ imageUrl } site={ siteUrl } >
 	<main class={ styles.main }>
 		<section class={ styles.main__header }>
 			<Title title={ title } color={ principalColor }/>

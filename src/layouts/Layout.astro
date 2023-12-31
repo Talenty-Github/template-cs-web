@@ -1,20 +1,28 @@
 ---
 import { type ILayout } from '../interfaces';
 
-const { title, languague, background, favicon } = Astro.props as ILayout;
+const { title, languague, background, favicon, site } = Astro.props as ILayout;
 ---
 
 <!doctype html>
 <html lang={(languague === 'ES' ? 'es' : 'en')}>
-	<!-- TODO add more metadata -->
 	<head>
 		<meta charset='UTF-8' />
 		<meta name='description' content='Astro description' />
 		<meta name='viewport' content='width=device-width' />
 		<meta name='generator' content={Astro.generator} />
+		<meta name='robots' content='index, follow'>
+		<meta http-equiv='X-UA-Compatible' content='IE=edge'>
+
 		<link rel='icon' type='image/svg+xml' href={ favicon } />
 		<link rel='sitemap' href='/sitemap-index.xml' />
 		<title>{title}</title>
+
+		<meta property='og:title' content={ title }>
+		<meta property='og:description' content={ (languague === 'ES' ? 'Muy pronto estaremos disponibles para todos...' : 'We will soon be available to everyone...') }>
+		<meta property='og:image' content={ favicon }>
+		<meta property='og:url' content={site}>
+		<meta name='twitter:card' content={favicon}>
 	</head>
 	<body>
 		<slot />
