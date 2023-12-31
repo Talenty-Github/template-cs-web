@@ -4,4 +4,4 @@ export default interface ISocialButton {
 	link: string;
 	type: IconType;
 	color: string;
-};
+}

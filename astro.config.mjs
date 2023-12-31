@@ -7,12 +7,19 @@ const dateTime = new Date();
 // https://astro.build/config
 export default defineConfig({
 	publicDir: 'public/',
-	site: 'https://www.agenciatopty.com',
+	site: '', // here the url site in production
 	integrations: [
 		sitemap({
 			changefreq: 'weekly',
 			priority: '1.0',
-			lastmod: `${dateTime.getFullYear()}-${dateTime.getMonth()}-${dateTime.getDay()}`
+			lastmod: `${dateTime.getFullYear()}-${dateTime.getMonth()}-${dateTime.getDay()}`,
+			i18n: {
+				defaultLocale: 'en',
+				locales: {
+					en: 'en-US',
+					es: 'es-ES'
+				}
+			}
 		})
 	],
 	output: 'server',

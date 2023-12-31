@@ -5,4 +5,4 @@ export default interface ILayout {
 	languague: Languague;
 	background: string;
 	favicon: string;
-};
+}
