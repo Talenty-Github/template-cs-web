@@ -1,4 +1,4 @@
-export type IconType = 'instagram' | 'facebook' | 'tiktok' | 'youtube';
+export type IconType = 'instagram' | 'facebook' | 'tiktok' | 'youtube' | 'whatsapp';
 
 export default interface ISocialButton {
 	link: string;

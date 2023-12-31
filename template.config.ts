@@ -27,6 +27,10 @@ export const templateData: IPageData = {
 		{
 			type: 'youtube',
 			link: 'https://www.youtube.com/@GringoGordo'
+		},
+		{
+			type: 'whatsapp',
+			link: 'https://www.youtube.com/@GringoGordo'
 		}
 	]
 };

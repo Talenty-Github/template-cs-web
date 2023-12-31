@@ -1,5 +1,5 @@
 type Languague = 'ES' | 'EN';
-type IconType = 'instagram' | 'facebook' | 'tiktok' | 'youtube';
+type IconType = 'instagram' | 'facebook' | 'tiktok' | 'youtube' | 'whatsapp';
 
 export interface IPageData {
 	title: string;
