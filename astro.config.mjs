@@ -7,7 +7,7 @@ const dateTime = new Date();
 // https://astro.build/config
 export default defineConfig({
 	publicDir: 'public/',
-	site: '', // here the url site in production
+	site: templateData.siteUrl,
 	integrations: [
 		sitemap({
 			changefreq: 'weekly',
