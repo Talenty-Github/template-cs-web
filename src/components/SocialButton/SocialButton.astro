@@ -1,25 +1,17 @@
 ---
 import 'bootstrap-icons/font/bootstrap-icons.css';
-import { IconType } from '../../interfaces';
+import type { ISocialButton } from '../../interfaces';
 import styles from './social-button.module.scss';
-import templateData from '../../../template.config';
 
-interface SocialButtonProps {
-	link: string;
-	iconType: IconType,
-}
-
-const { link, iconType }: SocialButtonProps = Astro.props as SocialButtonProps;
-// Todo: remove this line from here
-const pageColorHover = templateData.socialColor;
+const { link, type, color }: ISocialButton = Astro.props as ISocialButton;
 ---
 
-<a href={ link } target='_blank' rel='noopener noreferrer' class={ styles['social-button'] }>
-	<i class=`bi bi-${iconType}`></i>
+<a href={ link } target='_blank' rel='noopener noreferrer' class={ styles.socialButton }>
+	<i class=`bi bi-${type}`></i>
 </a>
 
-<style define:vars={{ pageColorHover }}>
-	a > i {
-		color: var(--pageColorHover) !important;
+<style define:vars={{ color }}>
+	a {
+		color: var(--color);
 	}
 </style>

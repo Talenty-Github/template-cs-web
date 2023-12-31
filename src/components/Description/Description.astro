@@ -1,0 +1,39 @@
+---
+import type { IDescription } from '../../interfaces';
+
+const { languague, color }: IDescription = Astro.props as IDescription;
+---
+
+<h2>{(languague === 'ES' ? 'Muy pronto' : 'Coming soon')}</h2>
+
+<style define:vars={{ color }}>
+	h2 {
+		color: transparent;
+		font-weight: 500;
+		text-align: center;
+		font-size: 140px;
+
+		margin-bottom: -150px;
+		-webkit-text-stroke: 1px var(--color);
+
+		text-transform: uppercase;
+		transition: color 1s ease-in-out, -webkit-text-stroke 1s ease-in-out;
+		animation: changeColor 1s ease-in-out 1s infinite alternate;
+	}
+
+	@keyframes changeColor {
+		0% {
+			-webkit-text-stroke: 1px var(--color);
+		}
+
+		100% {
+			color: var(--color);
+		}
+	}
+
+	@media (max-width: 800px) {
+		h2 {
+			font-size: 80px;
+		}
+	}
+</style>

@@ -1,19 +1,14 @@
 ---
-import templateData from '../../../template.config';
+import type { ITittle } from '../../interfaces';
 import './title.module.scss';
 
-interface TittleProps {
-	title: string;
-}
-
-const { title }: TittleProps = Astro.props as TittleProps;
-const templateDataColor: string = templateData.pageColor;
+const { title, color }: ITittle = Astro.props as ITittle;
 ---
 
 <h1>{ title }</h1>
 
-<style define:vars={{ templateDataColor }}>
+<style define:vars={{ color }}>
 	h1 {
-		color: var(--templateDataColor);
+		color: var(--color);
 	}
 </style>

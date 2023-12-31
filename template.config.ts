@@ -1,45 +1,31 @@
-import { IconType, type PageData } from './src/interfaces';
+import { type IPageData } from './src/interfaces';
 
-const templateData: PageData = {
-	title: 'Gringo Gordo West Virginia',
-	subTitle: 'Coming Soon this fall...',
-	pageColor: '#85D8FF',
-	backgroundColor: '#0D202E',
-	socialColor: '#FFFFFF',
-	imagePreview: {
-		src: 'https://firebasestorage.googleapis.com/v0/b/agency-topty.appspot.com/o/gringo_gordowv.png?alt=media&token=7e4625f2-b24b-42c1-8e3d-ab5593fb1016',
-		alt: 'This is an example of Alternative Text'
+export const templateData: IPageData = {
+	title: 'Título de ejemplo',
+	languague: 'ES',
+	imageUrl: 'https://firebasestorage.googleapis.com/v0/b/agency-topty.appspot.com/o/gringo_gordowv.png?alt=media&token=7e4625f2-b24b-42c1-8e3d-ab5593fb1016',
+	colors: {
+		background: '#0D202E',
+		principalColor: '#FFFFFF',
+		socialColor: '#FFFFFF',
+		soonColor: '#FFFFFF'
 	},
-	buttonList: [
+	socialMedia: [
 		{
-			type: IconType.Instagram,
-			link: 'https://www.instagram.com/gringogordowv/',
-			color: {
-				icon: '#FFFFFF'
-			}
+			type: 'instagram',
+			link: 'https://www.instagram.com/gringogordowv'
 		},
 		{
-			type: IconType.Tiktok,
-			link: 'https://www.tiktok.com/@gringogordowv',
-			color: {
-				icon: '#FFFFFF'
-			}
+			type: 'tiktok',
+			link: 'https://www.tiktok.com/@gringogordowv'
 		},
 		{
-			type: IconType.Facebook,
-			link: 'https://www.facebook.com/GringoGordoWestVirginia/',
-			color: {
-				icon: '#FFFFFF'
-			}
+			type: 'facebook',
+			link: 'https://www.facebook.com/GringoGordoWestVirginia'
 		},
 		{
-			type: IconType.YouTube,
-			link: 'https://www.youtube.com/@GringoGordo',
-			color: {
-				icon: '#FFFFFF'
-			}
+			type: 'youtube',
+			link: 'https://www.youtube.com/@GringoGordo'
 		}
 	]
 };
-
-export default templateData;

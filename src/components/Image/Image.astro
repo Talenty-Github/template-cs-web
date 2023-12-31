@@ -1,0 +1,14 @@
+---
+import type { IImage } from '../../interfaces';
+
+const { src, alt }: IImage = Astro.props as IImage;
+---
+
+<img src={ src } alt={ alt } />
+
+<style>
+	img {
+		width: 300px;
+		border-radius: 100%;
+	}
+</style>

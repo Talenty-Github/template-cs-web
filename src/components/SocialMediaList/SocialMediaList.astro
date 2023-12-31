@@ -1,0 +1,19 @@
+---
+import SocialButton from '../SocialButton/SocialButton.astro';
+import type { ISocialButton, ISocialMediaList } from '../../interfaces';
+import styles from './social-media-list.module.scss';
+
+const { socialMedia, color }: ISocialMediaList = Astro.props as ISocialMediaList;
+---
+
+<div class={ styles.socialList }>
+	{socialMedia.map(({ link, type }: ISocialButton) => {
+		return (
+			<SocialButton
+				link={ link }
+				type={ type }
+				color={ color }
+			/>
+		);
+	})}
+</div>

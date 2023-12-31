@@ -1,33 +1,35 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import {
-	ImageComponent,
-	SocialButtonList,
-	Subtitle,
+	Description,
+	Image,
+	SocialMediaList,
 	Title
 } from '../components/index.astro';
-import pageData from '../../template.config';
+import { templateData } from '../../template.config';
 import styles from './home.module.scss';
 
-const {
-	imagePreview,
-	title,
-	buttonList
-} = pageData;
+const { title, languague, colors, imageUrl, socialMedia } = templateData;
+const { principalColor, background, socialColor, soonColor } = colors;
 ---
 
-<Layout title={ title }>
+<Layout title={ title } languague={ languague } background={ background } favicon={ imageUrl } >
 	<main class={ styles.main }>
-		<div class={ styles.main__header }>
-			<Title title={ title }/>
+		<section class={ styles.main__header }>
+			<Title title={ title } color={ principalColor }/>
+
 			<div class={ styles.main__header__logo }>
-				<ImageComponent src={ imagePreview.src } alt={ imagePreview.alt } />
+				<Image
+					src={ imageUrl }
+					alt={ (languague === 'ES' ? `Imagen de ${title}` : `Image of ${title}`) }
+				/>
+
 				<div class={ styles.main__header__logo__social }>
-					<SocialButtonList buttonList={ buttonList }/>
+					<SocialMediaList socialMedia={ socialMedia } color={ socialColor }/>
 				</div>
 			</div>
-		</div>
+		</section>
 
-		<Subtitle/>
+		<Description languague={ languague } color={ soonColor } />
 	</main>
 </Layout>

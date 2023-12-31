@@ -7,14 +7,10 @@ h1 {
 	margin-bottom: -$spacing-24;
 }
 
-h3 {
-	color: $carbon-600;
-	font-size: $font-size-44;
-}
-
 @media (max-width: $breakpoint-tablet) {
   h1 {
 		text-align: center;
+		font-size: $spacing-40;
 		margin-bottom: 20px;
 	}
 }

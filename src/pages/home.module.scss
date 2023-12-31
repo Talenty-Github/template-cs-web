@@ -22,11 +22,15 @@
 
 @media (max-width: $breakpoint-tablet) {
   .main {
-		padding: 20px 56px 0 56px;
+		padding: 20px $spacing-56 0 $spacing-56;
 
 		&__header {
 			align-items: center;
-			flex-direction: column;
+			flex-direction: column-reverse;
+
+			&__logo {
+				margin-top: $spacing-56;
+			}
 		}
 	}
 }
